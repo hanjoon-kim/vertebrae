@@ -75,6 +75,7 @@ myTweet.set('message', 'Hello, world!');
  * http://backbonejs.org/#Events-on
  */
 
+
 /* Listen for our model's `change` event: */
 myTweet.on('change',
   function(/* this event holds information about the change: */ e) {
@@ -83,7 +84,7 @@ myTweet.on('change',
     console.log(e);
 
     // Write code to log the changed attribute:
-    // console.log(YOUR CODE HERE);
+    console.log(myTweet.title);
   }
 );
 
@@ -96,7 +97,8 @@ myTweet.on('change',
  * by the framework. Review these now (at http://backbonejs.org/#Model-set)
  * and write a one-liner that will make our `change` listener fire: */
 
-// myTweetYOUR CODE HERE;
+myTweet.set("title", 'hello');
+
 
 /* Once you have the `change` event firing, move on to rendering! */
   </script>

@@ -101,7 +101,13 @@ var Message = Backbone.Model.extend({
      * Putting it into the initialize function let's us be sure that
      * all models that are created will have event listeners on them.
      */
-    this.on(YOUR CODE HERE);
+    this.on('change',
+      function(e) {
+      console.info('something has changed');
+      console.log(e);
+  }
+    
+    );
     /* It is your turn to write the event handler.
      *
      * Make an event listener that will listen for a `change` in this model's
@@ -109,7 +115,7 @@ var Message = Backbone.Model.extend({
      * (`renderSomethingOnThePage`) and pass the message attribute
      * on the model as an argument.
      *
-     * Try it yourself, then check out how the function was defined on the
+     * Try it yourself, then check out how the functio sn was defined on the
      * previous exercise.
      */
   },
